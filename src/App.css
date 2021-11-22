@@ -1,0 +1,28 @@
+.App{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+  body{
+    background: url("https://www.hdwallpaper.nu/wp-content/uploads/2018/11/rick_and_morty-2.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*Doesn't show white space as browser dimensions change*/
+    background-attachment: fixed;
+  }
+  button{
+    background-color: #49C918;
+    color: white;
+    font-size: 20px;
+    border: none;
+    width: 190px;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 10px;
+  }
