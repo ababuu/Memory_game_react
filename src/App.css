@@ -21,7 +21,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    /*Doesn't show white space as browser dimensions change*/
     background-attachment: fixed;
     
   }
