@@ -1,18 +1,12 @@
 import React from "react";
 import './grid_maker.css'
-function MakeGrid(){
-    return(
-        <div className='grid_container'>
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>  
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>  
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
-            <div class="grid-item">9</div>
-        </div>
-    )
+import pictures from './pictures.json'
+function MakeGrid(props){
+        return(
+            <div className='grid_container'>
+                {pictures.map(p=>console.log(p.src))}
+                {pictures.map((picture)=><div className='gird_item'><img alt='' className='grid_image' src={picture.src}/><p className='name'>{picture.name}</p></div>)}
+            </div>
+        )
 }
 export default MakeGrid;

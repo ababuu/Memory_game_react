@@ -5,6 +5,14 @@
   justify-content: center;
   flex-direction: column;
   }
+  @font-face {
+    font-family: 'Shwifty';
+    src: local('Shwifty'), url(./get_schwifty.ttf) format('opentype');
+  }
+  *{
+    font-family: Shwifty, Arial, serif;
+  }
+  
   body{
     background: url("https://www.hdwallpaper.nu/wp-content/uploads/2018/11/rick_and_morty-2.jpg");
     -webkit-background-size: cover;
@@ -15,6 +23,7 @@
     background-position: center center;
     /*Doesn't show white space as browser dimensions change*/
     background-attachment: fixed;
+    
   }
   button{
     background-color: #49C918;
@@ -25,4 +34,8 @@
     height: 60px;
     margin-top: 30px;
     border-radius: 10px;
+  }
+  .title{
+    color: rgba(68, 198, 250, 0.842);
+    font-size: 50px;
   }
