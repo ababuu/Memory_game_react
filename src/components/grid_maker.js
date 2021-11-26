@@ -70,11 +70,12 @@ function MakeGrid(props){
     const shuffleArray=()=>{
         const shuffledArray=shuffle(pic);
         console.log(pic)
-        setPic(shuffledArray);
+        setPic([...shuffledArray]);
         console.log(pic)
         console.log('clicked SA')
     }
     const handleClick=()=>{
+        
         shuffleArray();
         console.log('clicked HC')
     }
