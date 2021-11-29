@@ -95,8 +95,11 @@ function MakeGrid(props){
                     alert('Game Over! New High Score!');
                     setHighScore(currentScore);
                 }
-                else{
+                else if(currentScore<=highScore){
                     alert('Game Over!');
+                }
+                else if(currentScore===9){
+                    alert('Congratulations you have completed the game');
                 }
                 setCurrentScore(0);
                 pic.forEach(element=> element.isClicked=false);
