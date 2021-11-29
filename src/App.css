@@ -38,3 +38,19 @@
     color: rgba(68, 198, 250, 0.842);
     font-size: 50px;
   }
+  @media(max-width:650px){
+    .title-image{
+      width: 80%;
+    }
+    .title{
+      font-size: 40px;
+    }
+  }
+  @media(max-width: 370px){
+    .title-image{
+      width: 85%;
+    }
+    .title{
+      font-size: 30px;
+    }
+  }

@@ -5,8 +5,8 @@ function Navbar(props) {
         <header>
             <div>
                 <nav>
-                    <p>Score: <span>{props.currentScore}</span></p>
-                    <p>Top Score: <span>{props.highScore}</span> </p>
+                    <p className='score'>Score: <span>{props.currentScore}</span></p>
+                    <p className='score'>Top Score: <span>{props.highScore}</span> </p>
                 </nav>
             </div>
         </header>        

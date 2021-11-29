@@ -8,7 +8,7 @@ function App() {
   }
   return (
     <div className="App">
-      <img alt='' src="https://res.cloudinary.com/lennyj/image/upload/v1593515673/58f37720a4fa116215a9240f_1.png"/>
+      <img className='title-image' alt='' src="https://res.cloudinary.com/lennyj/image/upload/v1593515673/58f37720a4fa116215a9240f_1.png"/>
       <h1 className='title'>Memory Game</h1>
       {display ? null: <button onClick={handleClick}>Start</button>}
       {display ? <MakeGrid/> : null}
