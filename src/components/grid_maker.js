@@ -2,8 +2,8 @@ import React,{useState} from "react";
 import './grid_maker.css'
 import Navbar from "./navbar";
 function MakeGrid(props){
-    const [currentScore,setCurrentScore]=useState(0);
-    const [highScore,setHighScore]=useState(0);
+    let [currentScore,setCurrentScore]=useState(0);
+    let [highScore,setHighScore]=useState(0);
     const [pic,setPic]=useState(
         [
             {
@@ -79,11 +79,12 @@ function MakeGrid(props){
         setPic([...shuffledArray]);
         
     }
-    const handleClick=(e)=>{
+    const handleClick=(id)=>{
         shuffleArray();
-        handleScore();
+        handleScore(id);
     }
     const handleScore=(id)=>{
+        console.log(id);
         pic.forEach(element=>{
             if(element.id===id && element.isClicked===false){
                 element.isClicked=true;
@@ -91,7 +92,11 @@ function MakeGrid(props){
             }
             else if(element.id===id && element.isClicked===true){
                 if(currentScore>highScore){
+                    alert('Game Over! New High Score!');
                     setHighScore(currentScore);
+                }
+                else{
+                    alert('Game Over!');
                 }
                 setCurrentScore(0);
                 pic.forEach(element=> element.isClicked=false);
@@ -99,14 +104,14 @@ function MakeGrid(props){
         })
     }
     const handleIncrement=()=>{
-        setCurrentScore(currentScore++);
+        setCurrentScore(currentScore+1);
     }
         return(
             <div>
                 <Navbar currentScore={currentScore} highScore={highScore}/>
                 <div className='grid_container'>
                     {pic.map((picture)=>{
-                        return <div onClick={()=>handleClick(pic.id)} ><img alt='' className='grid_image' src={picture.url} /> <p className='name'>{picture.name}</p></div>
+                        return <div onClick={()=>handleClick(picture.id)} ><img alt='' className='grid_image' src={picture.url} /> <p className='name'>{picture.name}</p></div>
                     })}
                 
             </div>
