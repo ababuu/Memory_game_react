@@ -111,7 +111,7 @@ function MakeGrid(props){
                 <Navbar currentScore={currentScore} highScore={highScore}/>
                 <div className='grid_container'>
                     {pic.map((picture)=>{
-                        return <div onClick={()=>handleClick(picture.id)} ><img alt='' className='grid_image' src={picture.url} /> <p className='name'>{picture.name}</p></div>
+                        return <div className='grid-item' onClick={()=>handleClick(picture.id)} ><img alt='' className='grid_image' src={picture.url} /> <p className='name'>{picture.name}</p></div>
                     })}
                 
             </div>
