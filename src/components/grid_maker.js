@@ -59,6 +59,60 @@ function MakeGrid(props){
                 "name":"Evil Morty",
                 "url":"https://cdn.mos.cms.futurecdn.net/ERR2cq2CWayoZsxn38CBRm-970-80.jpg.webp",
                 "isClicked": false
+            },
+            {
+                "id":"10",
+                "name":"Squanchy",
+                "url":"https://i.pinimg.com/originals/0d/a9/36/0da936165e05585c4f95c641799db250.jpg",
+                "isClicked": false
+            },
+            {
+                "id":"11",
+                "name":"Jessica",
+                "url":"https://www.looper.com/img/gallery/why-jessica-from-rick-and-morty-season-5-episode-1-has-fans-scratching-their-heads/l-intro-1624385923.jpg",
+                "isClicked": false
+            },
+            {
+                "id":"12",
+                "name":"Doofus Rick",
+                "url":"https://i.pinimg.com/originals/65/d5/01/65d50155249ae2e6fc683cae1f5d788c.jpg",
+                "isClicked": false
+            },
+            {
+                "id":"13",
+                "name":"SnowBall",
+                "url":"https://i.pinimg.com/564x/b0/2a/95/b02a95ae0658e18e855abb14459e2ee6.jpg",
+                "isClicked": false
+            },
+            {
+                "id":"14",
+                "name":"Pickel Rick",
+                "url":"https://i.pinimg.com/564x/4b/79/79/4b79793d2fc4b9a87cb307681bb2f186.jpg",
+                "isClicked": false
+            },
+            {
+                "id":"15",
+                "name":"Jerry",
+                "url":"https://i.pinimg.com/564x/72/c3/3b/72c33b5df086100cfcd1c29aa02020b6.jpg",
+                "isClicked": false
+            },
+            {
+                "id":"16",
+                "name":"Beth",
+                "url":"https://i.pinimg.com/564x/9f/31/10/9f3110538e83e58d1399ed633b35f1e1.jpg",
+                "isClicked": false
+            },
+            {
+                "id":"17",
+                "name":"Summer",
+                "url":"https://i.pinimg.com/564x/9b/f0/ff/9bf0ff7215ca2e5387a0377f955e5d0e.jpg",
+                "isClicked": false
+            },
+            {
+                "id":"18",
+                "name":"Scary Terry",
+                "url":"https://i.pinimg.com/564x/90/6b/f4/906bf4b045de705a805e23249a891c5b.jpg",
+                "isClicked": false
             }
         ]
     );
@@ -98,12 +152,13 @@ function MakeGrid(props){
                 else if(currentScore<=highScore){
                     alert('Game Over!');
                 }
-                else if(currentScore===9){
+                else if(currentScore==18){
                     alert('Congratulations you have completed the game');
                 }
                 setCurrentScore(0);
                 pic.forEach(element=> element.isClicked=false);
             }
+
         })
     }
     const handleIncrement=()=>{
